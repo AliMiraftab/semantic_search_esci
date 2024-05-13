@@ -3,19 +3,20 @@
 ## Approach
 The semantic search problem is formulated as a Retrieval & Re-Ranking problem, the diagram below shows the building blocks of the system. 
 The prototype system is based on models as the result of three steps:
-- First step: building the baseline models from the esci-data dataset repo.
+- First step: building the baseline models from the [esci-data dataset repo](https://github.com/amazon-science/esci-data/blob/main/ranking/train.py).
 - Second step: using **pre-trained** models from [SentenceTransformers](https://sbert.net/) and [Huggingface](https://huggingface.co/).
   - For Retrieval: bi-encoder models:
-    - specific for semantic search: 'sentence-transformers/multi-qa-mpnet-base-dot-v1'
-    - general purpose model: 'sentence-transformers/all-mpnet-base-v2'
+    - specific for semantic search: '[sentence-transformers/multi-qa-mpnet-base-dot-v1](https://huggingface.co/sentence-transformers/multi-qa-mpnet-base-dot-v1)'
+    - general purpose model: '[sentence-transformers/all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)'
   - For Ranking: cross-encoder models
-    - 'cross-encoder/ms-marco-MiniLM-L-12-v2'
-    - 'cross-encoder/stsb-roberta-large' (this model didn't work in pre-training and was excluded from the experiment)
+    - '[cross-encoder/ms-marco-MiniLM-L-12-v2](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-12-v2)'
+    - '[cross-encoder/stsb-roberta-large](https://huggingface.co/cross-encoder/stsb-roberta-large)' (this model didn't work in pre-training and was excluded from the experiment)
 - Third step: **fine-tuned** the pre-trained models from step two on the esci-data dataset.
 
 The vector index databases are built using [FAISS](https://github.com/facebookresearch/faiss). 
 
 ![Retrieval & Re-Ranking Diagram](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/InformationRetrieval.png)
+Photo credit: [sbert](https://www.sbert.net/examples/applications/retrieve_rerank/README.html)
 
 ## Results
 
@@ -42,7 +43,7 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 - EDA and Data Processing, [01_eda_dataprocessing.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/Notebooks/01_eda_dataprocessing.ipynb): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
 - Feature Engineering, [02_feature_engineering.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/Notebooks/02_feature_engineering.ipynb): In this notebook, I focused on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, I apply summarization techniques to shorten the features.
   - I employed cleaning practices such as denoising, normalization, and lemmatization on each feature, tailored to the nature of the unstructured data.
-  - I explored the LLM model "Falconsai/text_summarization" for text summarization but opted for simpler methods due to time constraints.
+  - I explored the LLM model "[Falconsai/text_summarization](https://huggingface.co/Falconsai/text_summarization)" for text summarization but opted for simpler methods due to time constraints.
   - The final feature is a combination of all feature columns:
     ```python
     def combine_features(row):
