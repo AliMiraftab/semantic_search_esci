@@ -17,6 +17,14 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 
 ![Retrieval & Re-Ranking Diagram](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/InformationRetrieval.png)
 
+## Results
+
+| Step        | Model Name | Task       | Type          | MRR | Hits@1 | Hits@5 | Hits@10 | 
+| --------    | ---------- | ---------- | ----------    |     |        |        |         | 
+| Baseline    |            | Ranking    | Cross-Encoder |     |        |        |         |  
+| Pre-trained |            | Retrieval  | Bi-Encoder    |     |        |        |         |  
+| Pre-trained |            | Retrieval  | Bi-Encoder    |     |        |        |         |  
+
 ## Notebooks Descriptions and Considerations:
 - 01_eda_dataprocessing.ipynb (EDA and Data Processing): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
 - 02_feature_engineering.ipynb (Feature Engineering): In this notebook, we focus on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, we apply summarization techniques to shorten the features.
