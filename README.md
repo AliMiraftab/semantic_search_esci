@@ -36,7 +36,7 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 
 ## Notebooks Descriptions and Considerations:
 - 01_eda_dataprocessing.ipynb (EDA and Data Processing): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
-- 02_feature_engineering.ipynb (Feature Engineering): In this notebook, we focus on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, we apply summarization techniques to shorten the features.
+- 02_feature_engineering.ipynb (Feature Engineering): In this notebook, we focus on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, I apply summarization techniques to shorten the features.
   - We employ cleaning practices such as denoising, normalization, and lemmatization on each feature, tailored to the nature of the unstructured data.
   - We explore the LLM model "Falconsai/text_summarization" for text summarization but opt for simpler methods due to time constraints.
   - The final feature is a combination of all feature columns:
@@ -50,7 +50,7 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
                   f"Product Features: {row[col_product_bullet_point]}."
       return combined
     ```
-  - Ultimately, the processed data is ready for the next steps: scoring with pre-trained models and fine-tuning. However, to save time, we only use the 'Product Title' feature as input for the subsequent steps.
+  - Ultimately, the processed data is ready for the next steps: scoring with pre-trained models and fine-tuning. However, to save time, I only use the 'Product Title' feature as input for the subsequent steps.
 - 03_baseline.ipynb (Baseline Models): proposed by [esci-data train baseline](https://github.com/amazon-science/esci-data/blob/main/ranking/train.py).
 - 04_retrieval_ranking_pretrained_models.ipynb: using pretrained models for scoring, building the end-to-end Retrieval & Re-Ranking system accordingly, testing, and analysisng the result.
 - 05_retrieval_ranking_pretrained_models.ipynb: fine-tune the pretrained models, scoring, building the end-to-end Retrieval & Re-Ranking system accordingly, testing, and analysisng the result.
