@@ -21,9 +21,14 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 
 | Step        | Model Name                 | Task          | Type          | MRR      | Hits@1 | Hits@5 | Hits@10 | 
 | --------    | ----------                 | ----------    | ----------    | ------   | ------ | ------ | ------- | 
-| Baseline    | multi-qa-mpnet-base-dot-v1 | Ranking       | Cross-Encoder |          | Hits@1 | Hits@5 | Hits@10 | 
+| Baseline    | multi-qa-mpnet-base-dot-v1 | Ranking       | Cross-Encoder | 0.8204   | 0.7211 | 0.9447 | 0.9834  | 
 | Pre-trained | multi-qa-mpnet-base-dot-v1 | Retrieval     | Bi-Encoder    |          | MRR    | Hits@1 | Hits@5  |
 | Pre-trained | all-mpnet-base-v2          | Retrieval     | Bi-Encoder    |          | MRR    | Hits@1 | Hits@5  |
+| Pre-trained | ms-marco-MiniLM-L-12-v2    | Ranking       | Cross-Encoder |          | MRR    | Hits@1 | Hits@5  |
+| fine-tuned  | multi-qa-mpnet-base-dot-v1 | Retrieval     | Bi-Encoder    |          | MRR    | Hits@1 | Hits@5  |
+| fine-tuned  | all-mpnet-base-v2          | Retrieval     | Bi-Encoder    |          | MRR    | Hits@1 | Hits@5  |
+| fine-tuned  | ms-marco-MiniLM-L-12-v2    | Ranking       | Cross-Encoder |          | MRR    | Hits@1 | Hits@5  |
+
 
 ## Notebooks Descriptions and Considerations:
 - 01_eda_dataprocessing.ipynb (EDA and Data Processing): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
