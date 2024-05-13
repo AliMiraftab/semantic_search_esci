@@ -32,6 +32,10 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 | fine-tuned  | ms-marco-MiniLM-L-12-v2    | Ranking       | Cross-Encoder | 0.8109   | 0.7067 | 0.9442 | 0.9825  |
 
 ### Retrieval & Re-Ranking System Performance
+| System based on    | MRR      | Hits@1 | Hits@5 | Hits@10 | 
+| --------           | ------   | ------ | ------ | ------- | 
+| Pre-trained Models | 0.8969   | 0.8216 | 0.9883 | 0.9883  | 
+| Fine-tuned Models  | 0.8349   | 0.7421 | 0.9816 | 1.0000  | 
 
 
 ## Notebooks Descriptions and Considerations:
