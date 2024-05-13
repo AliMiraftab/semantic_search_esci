@@ -15,7 +15,8 @@ The prototype system is based on models as the result of three steps:
 
 The vector index databases are built using [FAISS](https://github.com/facebookresearch/faiss). 
 
-![Retrieval & Re-Ranking Diagram](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/InformationRetrieval.png)
+![Retrieval & Re-Ranking Diagram](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/InformationRetrieval.png)  
+
 Photo credit: [sbert](https://www.sbert.net/examples/applications/retrieve_rerank/README.html)
 
 ## Results
