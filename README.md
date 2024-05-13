@@ -19,6 +19,8 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 
 ## Results
 
+### Indivisual Model Performance
+
 | Step        | Model Name                 | Task          | Type          | MRR      | Hits@1 | Hits@5 | Hits@10 | 
 | --------    | ----------                 | ----------    | ----------    | ------   | ------ | ------ | ------- | 
 | Baseline    | multi-qa-mpnet-base-dot-v1 | Ranking       | Cross-Encoder | 0.8204   | 0.7211 | 0.9447 | 0.9834  | 
@@ -28,6 +30,8 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 | fine-tuned  | multi-qa-mpnet-base-dot-v1 | Retrieval     | Bi-Encoder    | 0.8030   | 0.6970 | 0.9395 | 0.9797  |
 | fine-tuned  | all-mpnet-base-v2          | Retrieval     | Bi-Encoder    | 0.7943   | 0.6812 | 0.9378 | 0.9817  |
 | fine-tuned  | ms-marco-MiniLM-L-12-v2    | Ranking       | Cross-Encoder | 0.8109   | 0.7067 | 0.9442 | 0.9825  |
+
+### Retrieval & Re-Ranking System Performance
 
 
 ## Notebooks Descriptions and Considerations:
