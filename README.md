@@ -36,9 +36,9 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 
 ## Notebooks Descriptions and Considerations:
 - 01_eda_dataprocessing.ipynb (EDA and Data Processing): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
-- 02_feature_engineering.ipynb (Feature Engineering): In this notebook, we focus on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, I apply summarization techniques to shorten the features.
-  - We employ cleaning practices such as denoising, normalization, and lemmatization on each feature, tailored to the nature of the unstructured data.
-  - We explore the LLM model "Falconsai/text_summarization" for text summarization but opt for simpler methods due to time constraints.
+- 02_feature_engineering.ipynb (Feature Engineering): In this notebook, I focused on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, I apply summarization techniques to shorten the features.
+  - I emploied cleaning practices such as denoising, normalization, and lemmatization on each feature, tailored to the nature of the unstructured data.
+  - I explores the LLM model "Falconsai/text_summarization" for text summarization but opt for simpler methods due to time constraints.
   - The final feature is a combination of all feature columns:
     ```python
     def combine_features(row):
