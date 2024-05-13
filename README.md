@@ -18,8 +18,8 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 ![Retrieval & Re-Ranking Diagram](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/InformationRetrieval.png)
 
 ## Notebooks Descriptions and Considerations:
-- 01_eda_dataprocessing (EDA and Data Processing): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
-- 02_feature_engineering (Feature Engineering): In this notebook, we focus on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, we apply summarization techniques to shorten the features.
+- 01_eda_dataprocessing.ipynb (EDA and Data Processing): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
+- 02_feature_engineering.ipynb (Feature Engineering): In this notebook, we focus on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, we apply summarization techniques to shorten the features.
   - We employ cleaning practices such as denoising, normalization, and lemmatization on each feature, tailored to the nature of the unstructured data.
   - We explore the LLM model "Falconsai/text_summarization" for text summarization but opt for simpler methods due to time constraints.
   - The final feature is a combination of all feature columns:
@@ -34,4 +34,4 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
       return combined
     ```
   - Ultimately, the processed data is ready for the next steps: scoring with pre-trained models and fine-tuning. However, to save time, we only use the 'Product Title' feature as input for the subsequent steps.
-  - 
+- 03_baseline.ipynb baseline models proposed by [esci-data train baseline](https://github.com/amazon-science/esci-data/blob/main/ranking/train.py).
