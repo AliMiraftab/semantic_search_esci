@@ -22,12 +22,12 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 | Step        | Model Name                 | Task          | Type          | MRR      | Hits@1 | Hits@5 | Hits@10 | 
 | --------    | ----------                 | ----------    | ----------    | ------   | ------ | ------ | ------- | 
 | Baseline    | multi-qa-mpnet-base-dot-v1 | Ranking       | Cross-Encoder | 0.8204   | 0.7211 | 0.9447 | 0.9834  | 
-| Pre-trained | multi-qa-mpnet-base-dot-v1 | Retrieval     | Bi-Encoder    |          | MRR    | Hits@1 | Hits@5  |
-| Pre-trained | all-mpnet-base-v2          | Retrieval     | Bi-Encoder    |          | MRR    | Hits@1 | Hits@5  |
-| Pre-trained | ms-marco-MiniLM-L-12-v2    | Ranking       | Cross-Encoder |          | MRR    | Hits@1 | Hits@5  |
-| fine-tuned  | multi-qa-mpnet-base-dot-v1 | Retrieval     | Bi-Encoder    |          | MRR    | Hits@1 | Hits@5  |
-| fine-tuned  | all-mpnet-base-v2          | Retrieval     | Bi-Encoder    |          | MRR    | Hits@1 | Hits@5  |
-| fine-tuned  | ms-marco-MiniLM-L-12-v2    | Ranking       | Cross-Encoder |          | MRR    | Hits@1 | Hits@5  |
+| Pre-trained | multi-qa-mpnet-base-dot-v1 | Retrieval     | Bi-Encoder    | 0.7767   | 0.6556 | 0.9320 | 0.9792  |
+| Pre-trained | all-mpnet-base-v2          | Retrieval     | Bi-Encoder    | 0.7648   | 0.6426 | 0.9252 | 0.9790  |
+| Pre-trained | ms-marco-MiniLM-L-12-v2    | Ranking       | Cross-Encoder | 0.7898   | 0.6738 | 0.9358 | 0.9774  |
+| fine-tuned  | multi-qa-mpnet-base-dot-v1 | Retrieval     | Bi-Encoder    | 0.8030   | 0.6970 | 0.9395 | 0.9797  |
+| fine-tuned  | all-mpnet-base-v2          | Retrieval     | Bi-Encoder    | 0.7943   | 0.6812 | 0.9378 | 0.9817  |
+| fine-tuned  | ms-marco-MiniLM-L-12-v2    | Ranking       | Cross-Encoder | 0.8109   | 0.7067 | 0.9442 | 0.9825  |
 
 
 ## Notebooks Descriptions and Considerations:
