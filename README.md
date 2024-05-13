@@ -40,8 +40,8 @@ Photo credit: [sbert](https://www.sbert.net/examples/applications/retrieve_reran
 
 
 ## Notebooks Descriptions and Considerations:
-- EDA and Data Processing, [01_eda_dataprocessing.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/Notebooks/01_eda_dataprocessing.ipynb): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
-- Feature Engineering, [02_feature_engineering.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/Notebooks/02_feature_engineering.ipynb): In this notebook, I focused on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, I apply summarization techniques to shorten the features.
+- EDA and Data Processing, [01_eda_dataprocessing.ipynb]([https://github.com/AliMiraftab/semantic_search_esci/blob/main/Notebooks/01_eda_dataprocessing.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/notebooks/01_eda_dataprocessing.ipynb)): This notebook provides an overview of the data through general statistics and initial ideas for data processing. It sets the stage for further analysis and feature engineering.
+- Feature Engineering, [02_feature_engineering.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/notebooks/02_feature_engineering.ipynb): In this notebook, I focused on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, I apply summarization techniques to shorten the features.
   - I employed cleaning practices such as denoising, normalization, and lemmatization on each feature, tailored to the nature of the unstructured data.
   - I explored the LLM model "[Falconsai/text_summarization](https://huggingface.co/Falconsai/text_summarization)" for text summarization but opted for simpler methods due to time constraints.
   - The final feature is a combination of all feature columns:
@@ -56,8 +56,8 @@ Photo credit: [sbert](https://www.sbert.net/examples/applications/retrieve_reran
       return combined
     ```
   - Ultimately, the processed data is ready for the next steps: scoring with pre-trained models and fine-tuning. However, to save time, I only use the 'Product Title' feature as input for the subsequent steps.
-- Baseline Models, [03_baseline.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/Notebooks/03_baseline.ipynb): proposed by [esci-data train baseline](https://github.com/amazon-science/esci-data/blob/main/ranking/train.py).
-- Pretrained Modeds, [04_retrieval_ranking_pretrained_models.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/Notebooks/04_retrieval_ranking_pretrained_models.ipynb): using pretrained models for scoring, building the end-to-end Retrieval & Re-Ranking system accordingly, testing, and analysisng the result.
-- Fine-Tuned Models [05_retrieval_ranking_pretrained_models.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/Notebooks/05_retrieval_ranking_fine_tuning_models.ipynb): fine-tune the pre-trained models, scoring, building the end-to-end Retrieval & Re-Ranking system accordingly, testing, and analyzing the result.
+- Baseline Models, [03_baseline.ipynb](): proposed by [esci-data train baseline](https://github.com/AliMiraftab/semantic_search_esci/blob/main/notebooks/03_baseline.ipynb).
+- Pretrained Modeds, [04_retrieval_ranking_pretrained_models.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/notebooks/04_retrieval_ranking_pretrained_models.ipynb): using pretrained models for scoring, building the end-to-end Retrieval & Re-Ranking system accordingly, testing, and analysisng the result.
+- Fine-Tuned Models [05_retrieval_ranking_pretrained_models.ipynb](https://github.com/AliMiraftab/semantic_search_esci/blob/main/notebooks/05_retrieval_ranking_fine_tuning_models.ipynb): fine-tune the pre-trained models, scoring, building the end-to-end Retrieval & Re-Ranking system accordingly, testing, and analyzing the result.
 
 Note: the prototype is for 'us' language but can be extended to 'es' and 'jp', too.
