@@ -22,4 +22,16 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 - 02_feature_engineering (Feature Engineering): In this notebook, we focus on processing text and categorical features. To prepare the data for the Large Language Models (LLMs) used in this prototype, we apply summarization techniques to shorten the features.
   - We employ cleaning practices such as denoising, normalization, and lemmatization on each feature, tailored to the nature of the unstructured data.
   - We explore the LLM model "Falconsai/text_summarization" for text summarization but opt for simpler methods due to time constraints.
+  - The final feature is a combination of all feature columns:
+    ```python
+    def combine_features(row):
+      combined = ""
+      combined += f"Brand: {row[col_product_brand]}, " \
+                  f"Color: {row[col_product_color]}, " \
+                  f"Product Title: {row[col_product_title]}, " \
+                  f"Product Description: {row[col_product_description]}, and " \
+                  f"Product Features: {row[col_product_bullet_point]}."
+      return combined
+    ```
   - Ultimately, the processed data is ready for the next steps: scoring with pre-trained models and fine-tuning. However, to save time, we only use the 'Product Title' feature as input for the subsequent steps.
+  - 
