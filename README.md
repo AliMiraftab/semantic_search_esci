@@ -58,3 +58,5 @@ The vector index databases are built using [FAISS](https://github.com/facebookre
 - 03_baseline.ipynb (Baseline Models): proposed by [esci-data train baseline](https://github.com/amazon-science/esci-data/blob/main/ranking/train.py).
 - 04_retrieval_ranking_pretrained_models.ipynb: using pretrained models for scoring, building the end-to-end Retrieval & Re-Ranking system accordingly, testing, and analysisng the result.
 - 05_retrieval_ranking_pretrained_models.ipynb: fine-tune the pretrained models, scoring, building the end-to-end Retrieval & Re-Ranking system accordingly, testing, and analysisng the result.
+
+Note: the prototype is for 'us' language but can be extended to 'es' and 'jp' too.
